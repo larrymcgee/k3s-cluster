@@ -15,5 +15,12 @@ spec:
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.31.0
+          volumeMounts:
+            - mountPath: /scratch
+              name: scratch-volume
           ports:
             - containerPort: 9090
+      volumes:
+        - name: scratch-volume
+          emptyDir:
+            sizeLimit: 500Mi
