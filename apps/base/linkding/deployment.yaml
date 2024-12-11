@@ -22,5 +22,5 @@ spec:
             - containerPort: 9090
       volumes:
         - name: scratch-volume
-          emptyDir:
-            sizeLimit: 500Mi
+          persistentVolumeClaim:
+            claimName: linkding-data-pvc
