@@ -3,3 +3,4 @@ kind:
 resources:
   - deployment.yaml
   - namespace.yaml
+  - storage.yaml
