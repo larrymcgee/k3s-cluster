@@ -28,7 +28,9 @@ spec:
   values:
     grafana:
       adminPassword: larry
-    ingress:
-      enabled: true
-    ingressClassName: traefik
-    hosts: [grafana.mcgee.tv]
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana.mcgee.tv
+        tls: []
