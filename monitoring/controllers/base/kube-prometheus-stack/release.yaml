@@ -33,4 +33,8 @@ spec:
         ingressClassName: traefik
         hosts:
           - grafana.mcgee.tv
-        tls: []
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grafana.mcgee.tv
+            
