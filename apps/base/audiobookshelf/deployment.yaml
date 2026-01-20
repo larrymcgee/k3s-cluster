@@ -24,7 +24,7 @@ spec:
           - name: PORT
             valueFrom:
               configMapKeyRef:
-                name: configmap
+                name: audiobook-configmap
                 key: port
         resources: {}
 status: {}
