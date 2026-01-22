@@ -31,22 +31,22 @@ spec:
           - mountPath: /etc/abs/config
             name: abs-config-pvc 
           - mountPath: /etc/abs/metadata
-            name: abs-metadata
+            name: abs-metadata-pvc
           - mountPath: /etc/abs/audiobooks
-            name: abs-audiobooks
+            name: abs-audiobooks-pvc
           - mountPath: /etc/abs/podcasts
-            name: abs-podcasts
+            name: abs-podcasts-pvc
       volumes:
         - name: abs-config-pvc
           persistentVolumeClaim:
             claimName: abs-config-pvc
-        - name: abs-metadata
+        - name: abs-metadata-pvc
           persistentVolumeClaim:
             claimName: abs-metadata-pvc
-        - name: abs-audiobooks
+        - name: abs-audiobooks-pvc
           persistentVolumeClaim:
             claimName: abs-audiobooks-pvc
-        - name: abs-podcasts
+        - name: abs-podcasts-pvc
           persistentVolumeClaim:
             claimName: abs-podcasts-pvc
 status: {}
