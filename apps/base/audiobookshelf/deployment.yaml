@@ -37,7 +37,7 @@ spec:
           - mountPath: /etc/abs/podcasts
             name: abs-podcasts
       volumes:
-        - name: abs-config
+        - name: abs-config-pvc
           persistentVolumeClaim:
             claimName: abs-config-pvc
         - name: abs-metadata
