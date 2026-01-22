@@ -29,7 +29,7 @@ spec:
         resources: {}
         volumeMounts:
           - mountPath: /etc/abs/config
-            name: abs-config 
+            name: abs-config-pvc 
           - mountPath: /etc/abs/metadata
             name: abs-metadata
           - mountPath: /etc/abs/audiobooks
