@@ -27,4 +27,26 @@ spec:
                 name: audiobook-configmap
                 key: port
         resources: {}
+        volumeMounts:
+          - mountPath: /etc/abs/config
+            name: abs-config 
+          - mountPath: /etc/abs/metadata
+            name: abs-metadata
+          - mountPath: /etc/abs/audiobooks
+            name: abs-audiobooks
+          - mountPath: /etc/abs/podcasts
+            name: abs-podcasts
+      volumes:
+        - name: abs-config
+          persistentVolumeClaim:
+            claimName: abs-config-pvc
+        - name: abs-metadata
+          persistentVolumeClaim:
+            claimName: abs-metadata-pvc
+        - name: abs-audiobooks
+          persistentVolumeClaim:
+            claimName: abs-audiobooks-pvc
+        - name: abs-podcasts
+          persistentVolumeClaim:
+            claimName: abs-podcasts-pvc
 status: {}
