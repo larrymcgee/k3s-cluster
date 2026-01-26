@@ -32,13 +32,13 @@ spec:
                 key: port
         resources: {}
         volumeMounts:
-          - mountPath: /etc/abs/config
+          - mountPath: /config
             name: abs-config-pvc 
-          - mountPath: /etc/abs/metadata
+          - mountPath: /metadata
             name: abs-metadata-pvc
-          - mountPath: /etc/abs/audiobooks
+          - mountPath: /audiobooks
             name: abs-audiobooks-pvc
-          - mountPath: /etc/abs/podcasts
+          - mountPath: /podcasts
             name: abs-podcasts-pvc
       volumes:
         - name: abs-config-pvc
